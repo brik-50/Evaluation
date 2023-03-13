@@ -2,13 +2,13 @@ package com.example.test2.Repos;
 
 
 import com.example.test2.Models.Projet;
-import com.example.test2.Models.Tache;
-import jakarta.persistence.EntityManager;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface ProjetRepo extends JpaRepository<Projet,Long> {
 
     @Query(value = "SELECT * FROM projet  ORDER BY projet_id ASC;",nativeQuery = true)

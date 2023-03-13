@@ -30,7 +30,7 @@ public class UserController {
 
 
     @PostMapping("delete/user/{id}")
-    public void deleteUser(long id) {
+    public void deleteUser(long id) throws UserNotFoundException {
         userService.deleteUser(id);
     }
 

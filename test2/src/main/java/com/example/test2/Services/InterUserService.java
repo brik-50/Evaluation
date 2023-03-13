@@ -10,7 +10,7 @@ public interface InterUserService {
 
     public User getUserById(long id) throws UserNotFoundException;
 
-    public void deleteUser(long id);
+    public void deleteUser(long id) throws UserNotFoundException;
 
 
     public List<User> getUsers();

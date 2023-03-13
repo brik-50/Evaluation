@@ -42,13 +42,13 @@ public class ProjetService implements InterProjetService {
 
 
     @Override
-    public Projet addProjetToUser(Projet projet, long id_user) throws UserNotFoundException {
-       Optional<User> user = userRepo.findById(id_user);
+    public Projet addProjetToUser(Projet projet) throws UserNotFoundException {
+       Optional<User> user = userRepo.findById(projet.getUser().getUser_id());
 
         if(user.isPresent()){
            return projetRepo.save(projet);
         }else{
-            throw new UserNotFoundException("user not found "+ id_user);
+            throw new UserNotFoundException("user not found "+ projet.getUser().getUser_id());
         }
 
 

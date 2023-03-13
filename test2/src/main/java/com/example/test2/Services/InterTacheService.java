@@ -4,7 +4,6 @@ package com.example.test2.Services;
 import com.example.test2.Exceptions.ProjectNotFoundException;
 import com.example.test2.Exceptions.TacheNotFoundException;
 import com.example.test2.Models.Tache;
-import com.example.test2.Models.User;
 
 import java.util.List;
 

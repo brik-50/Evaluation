@@ -4,9 +4,11 @@ import com.example.test2.Models.Tache;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface TacheRepo extends JpaRepository<Tache,Long> {
 
     @Query(value = "SELECT * FROM tache  ORDER BY id_tache ASC;",nativeQuery = true)

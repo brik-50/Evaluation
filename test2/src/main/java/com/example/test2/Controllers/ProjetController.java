@@ -33,7 +33,7 @@ public class ProjetController {
 
     @PostMapping("save/projet")
     public  void addProjetToUser(Projet projet,long id_user) throws UserNotFoundException {
-        projetService.addProjetToUser(projet,id_user);
+        projetService.addProjetToUser(projet);
     }
 
 

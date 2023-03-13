@@ -14,5 +14,5 @@ public interface InterProjetService {
     public List<Projet> getProjets();
 
 
-    Projet addProjetToUser(Projet projet, long id_user) throws UserNotFoundException;
+    Projet addProjetToUser(Projet projet) throws UserNotFoundException;
 }

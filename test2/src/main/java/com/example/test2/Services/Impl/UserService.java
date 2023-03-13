@@ -29,13 +29,22 @@ public class UserService implements InterUserService {
         }
     }
 
-
-
     @Override
-    public void deleteUser(long id) {
-         userRepo.deleteUser(id);
+    public void deleteUser(long id) throws UserNotFoundException {
+              Optional<User> user = userRepo.findById(id);
+              if(user.isPresent()){
+                  userRepo.deleteUser(id);
+              }else{
+                  throw new UserNotFoundException("user not found with id ="+id);
+              }
+
 
     }
+
+
+
+
+
 
     @Override
     public List<User> getUsers() {
